@@ -82,6 +82,45 @@
     .counter input {
       text-align: center;
     }
+    /*  */
+    /*  */
+
+    .container{
+      margin-top:100px;
+      margin-bottom:100px;
+  }
+
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+
+#custCarousel .carousel-indicators {
+    position: static;
+    margin-top:20px;
+}
+
+#custCarousel .carousel-indicators > li {
+  width:100px;
+}
+
+ #custCarousel .carousel-indicators li img {
+    display: block;
+    opacity: 0.5;
+ }
+
+  #custCarousel .carousel-indicators li.active img {
+    opacity: 1;
+  }
+
+  #custCarousel .carousel-indicators li:hover img {
+    opacity: 0.75;
+  }
+
+  .carousel-item img{
+
+    width:80%;
+  }
     </style>
 </head>
 
@@ -166,12 +205,81 @@
 
     <!-- body -->
 
-    <div class="container">
+    <div class="container ">
         <div class="row">
-            <div class="col">
-                <img src="{% static 'images/tshirt-img.png' %}" alt="">
+            <div class="col border">
+                <!-- <img src="{% static 'images/tshirt-img.png' %}" alt=""> -->
+
+
+                    <!--  -->
+                    <div class="  ">
+                        <div class="row ">
+                          <div class="col-md-12">
+                            <div id="custCarousel" class="carousel slide w-100 " data-ride="carousel" style="justify-content:center;">
+                              <!-- slides -->
+                              <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                  <img src="{% static 'images/s2.png' %}" class=" h-75" alt="Hills">
+                                </div>
+                      
+                                <div class="carousel-item">
+                                  <img src="{% static 'images/s2.png' %}" class=" h-75" alt="Hills">
+                                </div>
+                      
+                                <div class="carousel-item">
+                                  <img src="{% static 'images/s2.png' %}" class=" h-75" alt="Hills">
+                                </div>
+                      
+                                
+                              </div>
+                      
+                              <!-- Left right -->
+                              <a class="carousel-control-prev" href="#custCarousel" data-slide="prev">
+                                <span>
+                                    <i class="fa fa-arrow-left text-dark fs-5" aria-hidden="true"></i>
+                                </span>
+                              </a>
+                              <a class="carousel-control-next" href="#custCarousel" data-slide="next">
+                                <span>
+                                    <i class="fa fa-arrow-right text-dark fs-5" aria-hidden="true"></i>
+                                </span>
+                              </a>
+                      
+                              <!-- Thumbnails -->
+                              <ol class="carousel-indicators list-inline ">
+                                <li class="list-inline-item active boder">
+                                  <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel">
+                                    <img src="{% static 'images/s2.png' %}" class="img-fluid w-75">
+                                  </a>
+                                </li>
+                      
+                                <li class="list-inline-item ">
+                                  <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel">
+                                    <img src="{% static 'images/s2.png' %}" class="img-fluid w-75">
+                                  </a>
+                                </li>
+                      
+                                <li class="list-inline-item ">
+                                  <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel">
+                                    <img src="{% static 'images/s2.png' %}"  class="img-fluid w-75">
+                                  </a>
+                                </li>
+                      
+                                 
+                               </ol>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                   
+
+
+                    <!--  -->
+
+
+                
             </div>
-            <div class="col">
+            <div class="col border">
                 <h3>SWT Pack of 3 Fine Cotton Jersey Long Sleeve T-Shirts Printed T-Shirt For Boys and Girls (FREE GIFT)
                     - Stylish Kids' Fashion</h3>
                 <h2>Rs. 1,234</h2>
@@ -220,6 +328,86 @@
             </div>
         </div>
     </div>
+
+    <!-- review and descrpiton -->
+    <div class="container border p-3 align-items-center">
+        <h3>Related Content</h3>
+        <div class="row ">
+            <div class="col">
+                
+                    <!--  -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'images/s2.png' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Tshirt RED</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <h5>Rs 4000</h5>
+                          <a href="#" class="btn ba w-100">Buy Now</a>
+                        </div>
+                      </div>
+
+                    <!--  -->
+
+
+
+
+                    
+               
+
+            </div>
+            <div class="col">
+                
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'images/s2.png' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Tshirt RED</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <h5>Rs 4000</h5>
+                          <a href="#" class="btn ba w-100">Buy Now</a>
+                        </div>
+                      </div>
+
+                    <!--  -->
+                
+
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'images/s2.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Tshirt RED</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5>Rs 4000</h5>
+                      <a href="#" class="btn w-100 ba">Buy Now</a>
+                    </div>
+                  </div>
+
+                <!--  -->
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row border">
+            <h3>Product details</h3>
+            <p>
+<b>Language </b> :  English <br>
+<b>Product Dimensions </b> :  0.98 x 4.02 x 5.26 inches; 0.04 Ounces <br>
+<b>Item model number </b> :  CAA001bt3MWH <br>
+<b>Batteries</b> : 1 Lithium Ion batteries required. <br>
+<b>Date First Available</b>  :  February 20, 2020 <br>
+<b>Manufacturer </b> : Belkin <br>
+<b>ASIN </b> : B08558JKGD <br>
+<b>Country of Origin</b> : Vietnam <br>
+<b>Best Sellers Rank</b>: #687 in Lightning Cables <br>
+
+            </p>
+        </div>
+    </div>
+
+
 
 
     <!-- body -->
@@ -374,6 +562,15 @@
 
 
 </body>
+<!-- slider -->
+<script>
+    // Function to show the selected image in the big image display
+    function showImage(imagePath) {
+        document.getElementById('bigImage').src = imagePath;
+    }
+</script>
+
+<!--  -->
 
 <script>
     function increaseQuantity() {
