@@ -11,3 +11,6 @@ def index(request):
 def base(request):
     return   render(request, 'base.html')
 
+
+def buy(request):
+    return render(request,'buy.html')
