@@ -121,6 +121,15 @@
 
     width:80%;
   }
+
+  /* carousel slide show images  */
+   .pc{
+    max-width: 100%; /* Ensure images don't exceed the width of their container */
+  height: auto; /* Maintain aspect ratio while resizing images */
+  display: block;
+
+   }
+  /*  */
     </style>
 </head>
 
@@ -213,21 +222,21 @@
 
                     <!--  -->
                     <div class="  ">
-                        <div class="row ">
+                        <div class="row cont">
                           <div class="col-md-12">
                             <div id="custCarousel" class="carousel slide w-100 " data-ride="carousel" style="justify-content:center;">
                               <!-- slides -->
                               <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                  <img src="{% static 'images/s2.png' %}" class=" h-75" alt="Hills">
+                                  <img src="{% static 'images/s1.png' %}" class="pc " alt="Hills">
                                 </div>
                       
                                 <div class="carousel-item">
-                                  <img src="{% static 'images/s2.png' %}" class=" h-75" alt="Hills">
+                                  <img src="{% static 'images/s2.png' %}" class="pc " alt="Hills">
                                 </div>
                       
                                 <div class="carousel-item">
-                                  <img src="{% static 'images/s2.png' %}" class=" h-75" alt="Hills">
+                                  <img src="{% static 'images/s2.png' %}" class="pc " alt="Hills">
                                 </div>
                       
                                 
@@ -249,19 +258,19 @@
                               <ol class="carousel-indicators list-inline ">
                                 <li class="list-inline-item active boder">
                                   <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel">
-                                    <img src="{% static 'images/s2.png' %}" class="img-fluid w-75">
+                                    <img src="{% static 'images/s1.png' %}" class="pc img-fluid ">
                                   </a>
                                 </li>
                       
                                 <li class="list-inline-item ">
                                   <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel">
-                                    <img src="{% static 'images/s2.png' %}" class="img-fluid w-75">
+                                    <img src="{% static 'images/s2.png' %}" class="pc img-fluid ">
                                   </a>
                                 </li>
                       
                                 <li class="list-inline-item ">
                                   <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel">
-                                    <img src="{% static 'images/s2.png' %}"  class="img-fluid w-75">
+                                    <img src="{% static 'images/s2.png' %}"  class="pc img-fluid ">
                                   </a>
                                 </li>
                       
@@ -319,7 +328,7 @@
                       </div>
 
                     <!--  -->
-                    <br><br>
+                    
                     <div>
                         <button class="ba btn fw-bold w-25">Add to Cart</button>
                         <button class="bn btn fw-bold w-25" >Buy now</button>

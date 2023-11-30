@@ -9,3 +9,6 @@ def index(request):
 
 def base(request):
     return   render(request, 'base.html')
+
+def buyc(request):
+    return HttpResponse('hello world')
