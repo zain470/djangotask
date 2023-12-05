@@ -19,6 +19,12 @@ def base(request):
     return   render(request, 'base.html',context)
 
 
+
 def buyc(request):
     return HttpResponse('hello world')
+
+
+
+
+
 
