@@ -139,10 +139,6 @@
 
    }
   /*  */
-
-            width: 80%;
-        }
-
     </style>
 </head>
 
@@ -234,7 +230,7 @@
             <div class="col border">
                 <!-- <img src="{% static 'images/tshirt-img.png' %}" alt=""> -->
 
-
+                
                     <!--  -->
                     <div class="  ">
                         <div class="row cont">
@@ -242,17 +238,12 @@
                             <div id="custCarousel" class="carousel slide w-100 " data-ride="carousel" style="justify-content:center;">
                               <!-- slides -->
                               <div class="carousel-inner">
+                                {% for p in prod %}
                                 <div class="carousel-item active">
-                                  <img src="{% static 'images/s1.png' %}" class="pc " alt="Hills">
+                                  <img src="{{p.product_images.url}}" class="pc " alt="">
                                 </div>
-                      
-                                <div class="carousel-item">
-                                  <img src="{% static 'images/s2.png' %}" class="pc " alt="Hills">
-                                </div>
-                      
-                                <div class="carousel-item">
-                                  <img src="{% static 'images/s2.png' %}" class="pc " alt="Hills">
-                                </div>
+                                {% endfor %}
+                                
                       
                                 
                               </div>
@@ -270,32 +261,14 @@
                               </a>
                       
                               <!-- Thumbnails -->
-                              <ol class="carousel-indicators list-inline ">
-                                <li class="list-inline-item active boder">
-                                  <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel">
-                                    <img src="{% static 'images/s1.png' %}" class="pc img-fluid ">
-                                  </a>
-                                </li>
-                      
-                                <li class="list-inline-item ">
-                                  <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel">
-                                    <img src="{% static 'images/s2.png' %}" class="pc img-fluid ">
-                                  </a>
-                                </li>
-                      
-                                <li class="list-inline-item ">
-                                  <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel">
-                                    <img src="{% static 'images/s2.png' %}"  class="pc img-fluid ">
-                                  </a>
-                                </li>
-                      
-                                 
-                               </ol>
+                              
+                                
+                              
                             </div>
                           </div>
                         </div>
                       </div>
-                   
+                      
 
 
                     <!--  -->
@@ -304,9 +277,11 @@
                 
             </div>
             <div class="col border">
-                <h3>SWT Pack of 3 Fine Cotton Jersey Long Sleeve T-Shirts Printed T-Shirt For Boys and Girls (FREE GIFT)
-                    - Stylish Kids' Fashion</h3>
-                <h2>Rs. 1,234</h2>
+                {% for p in prod %}
+                <h3>{{p.product_name}}</h3>
+                
+                <h2>Rs. {{p.product_price}}</h2>
+                {% endfor %}
                 <div>
                     <p class="text-muted fw-bold fs-5">Size</p>
                     <div>
@@ -416,18 +391,12 @@
     <div class="container">
         <div class="row border">
             <h3>Product details</h3>
+            {% for p in prod %}
             <p>
-<b>Language </b> :  English <br>
-<b>Product Dimensions </b> :  0.98 x 4.02 x 5.26 inches; 0.04 Ounces <br>
-<b>Item model number </b> :  CAA001bt3MWH <br>
-<b>Batteries</b> : 1 Lithium Ion batteries required. <br>
-<b>Date First Available</b>  :  February 20, 2020 <br>
-<b>Manufacturer </b> : Belkin <br>
-<b>ASIN </b> : B08558JKGD <br>
-<b>Country of Origin</b> : Vietnam <br>
-<b>Best Sellers Rank</b>: #687 in Lightning Cables <br>
-
+                {{p.product_description}}
             </p>
+            {% endfor %}
+
         </div>
   </div>
     {% block content %}

@@ -7,7 +7,11 @@ urlpatterns = [
 
     path('buy/',views.buyc,name='buy'),
 
-    path('buy/',views.buy,name='buy'),
+
+  
+
+   
+
 
     
     
